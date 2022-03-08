@@ -1,0 +1,6 @@
+.PanelCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px;
+}

@@ -1,0 +1,28 @@
+.NftFormCreate {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5vw;
+    align-items: center;
+}
+
+.NftFormCreate>input,
+.NftFormCreate>select {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 232, 235);
+    font-size: large;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.NftFormCreate>img {
+    width: 100%;
+}
+
+.NftFormCreate .ButtonLite {
+    width: 50%;
+    display: flex;
+}
