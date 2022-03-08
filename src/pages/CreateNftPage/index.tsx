@@ -90,7 +90,7 @@ const CreateNftPage = () => {
             <input type="text" name="description" onChange={(even) => {
                 setDataMeta({ ...dataMeta, description: even.target.value })
             }} placeholder="description" />
-            <input type="number" name="seller fee basis points" onChange={(even) => {
+            <input type="number" name="seller fee basis points" value={500} onChange={(even) => {
                 setDataMeta({ ...dataMeta, seller_fee_basis_points: even.target.value })
             }} placeholder="seller fee basis points fee*100" />
             <input type="file" name="image" onChange={async (even) => {
