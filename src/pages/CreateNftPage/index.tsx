@@ -24,12 +24,12 @@ const CreateNftPage = () => {
         symbol: "",
         description: "",
         seller_fee_basis_points: "",
-        image: "",
+        image: "https://t3.ftcdn.net/jpg/04/25/61/02/360_F_425610274_iTsjecWWkw4C37CDp5EBclLZg7x4fsKE.jpg",
         external_url: "",
         collection_name: "",
         collection_family: "",
         attributes: "",
-        properties: "",
+        properties: "https://t3.ftcdn.net/jpg/04/25/61/02/360_F_425610274_iTsjecWWkw4C37CDp5EBclLZg7x4fsKE.jpg",
         category: "image",
         creator: ""
     })
