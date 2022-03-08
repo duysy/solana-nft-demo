@@ -44,7 +44,7 @@ const CreateNftPage = () => {
         console.log(dataMeta)
     }, [publicKey, connection])
     async function createNft() {
-        setStateCreateNft("Please Wait")
+        setStateCreateNft("Please Wait - Upload IPFS")
         let metaData = nftCreateDataMeta({ ...dataMeta })
         let data = await pintaJSONToIPFS(API_Key, API_Secret, metaData)
         let IpfsHash = data.data.IpfsHash
@@ -59,7 +59,7 @@ const CreateNftPage = () => {
             console.log("None wallet")
             return
         };
-
+        setStateCreateNft("Please Wait - Mint NFT")
         const mintNFTResponse = await actions.mintNFT({
             connection,
             wallet: anchorWallet,
@@ -117,6 +117,7 @@ const CreateNftPage = () => {
                 alert("File was upload,Check at : " + IpfsHash)
                 setDataMeta({ ...dataMeta, properties: IpfsHash })
             }} placeholder="files" />
+            <img src={dataMeta.properties} alt="" />
             <select value={dataMeta.category} onChange={(even) => {
                 console.log(even.target.value)
                 setDataMeta({ ...dataMeta, category: even.target.value })
