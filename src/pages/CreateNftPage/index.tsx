@@ -24,12 +24,12 @@ const CreateNftPage = () => {
         symbol: "",
         description: "",
         seller_fee_basis_points: "",
-        image: "https://t3.ftcdn.net/jpg/04/25/61/02/360_F_425610274_iTsjecWWkw4C37CDp5EBclLZg7x4fsKE.jpg",
+        image: "",
         external_url: "",
         collection_name: "",
         collection_family: "",
         attributes: "",
-        properties: "https://t3.ftcdn.net/jpg/04/25/61/02/360_F_425610274_iTsjecWWkw4C37CDp5EBclLZg7x4fsKE.jpg",
+        properties: "",
         category: "image",
         creator: ""
     })
@@ -95,6 +95,7 @@ const CreateNftPage = () => {
             }} placeholder="seller fee basis points fee*100" />
             <input type="file" name="image" onChange={async (even) => {
                 // console.log(even.target.files[0])
+                setDataMeta({ ...dataMeta, image: "https://t3.ftcdn.net/jpg/04/25/61/02/360_F_425610274_iTsjecWWkw4C37CDp5EBclLZg7x4fsKE.jpg" })
                 let data = await pintaFILEToIPFS(API_Key, API_Secret, even.target.files[0])
                 let IpfsHash = `https://cloudflare-ipfs.com/ipfs/${data.data.IpfsHash}`
                 alert("File was upload,Check at : " + IpfsHash)
@@ -112,6 +113,7 @@ const CreateNftPage = () => {
             }} placeholder="collection family" />
             <input type="file" name="files" onChange={async (even) => {
                 // console.log(even.target.files[0])
+                setDataMeta({ ...dataMeta, properties: "https://t3.ftcdn.net/jpg/04/25/61/02/360_F_425610274_iTsjecWWkw4C37CDp5EBclLZg7x4fsKE.jpg" })
                 let data = await pintaFILEToIPFS(API_Key, API_Secret, even.target.files[0])
                 let IpfsHash = `https://cloudflare-ipfs.com/ipfs/${data.data.IpfsHash}`
                 alert("File was upload,Check at : " + IpfsHash)
