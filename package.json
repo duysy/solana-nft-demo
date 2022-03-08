@@ -1,6 +1,7 @@
 {
     "name": "demo-typescript",
     "version": "0.1.0",
+    "homepage": ".",
     "private": true,
     "dependencies": {
         "@project-serum/anchor": "^0.22.1",
